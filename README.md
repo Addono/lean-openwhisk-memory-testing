@@ -5,10 +5,10 @@
 + [Getting Started](#getting_started)
 + [Usage](#usage)
 
-## About <a name = "about"></a>
+## About<a name = "about"></a>
 These scripts setup OpenWhisk in a local single node Kubernetes cluster using Minikube. Afterwards, a minimal test set is ran against this cluster and various statistics on resource usage are displayed.
 
-## Getting Started <a name = "getting_started"></a>
+## Getting Started<a name = "getting_started"></a>
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 This guide is written and tested for MacOS, other OSes are probably able to follow along, although it is likely that some commands need to be adapted to their local alternatives.
@@ -91,7 +91,7 @@ kubectl get $(kubectl get pods -o name --namespace=openwhisk | grep install-pack
 
 The installation is completed when the status of the pod changes to completed.
 
-## Usage <a name = "usage"></a>
+## Usage<a name = "usage"></a>
 
 After the environment is setup as specified in [Getting Started](#getting_started), then we are ready to run the tests.
 ```bash
