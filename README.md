@@ -102,3 +102,13 @@ Now, there are three results.
  * **Gatling Latency Test**: At the end of the gatling report, the local directory is displayed where the Gatling test results can be retrieved. This result is mostly useful for determining whether or not the cluster was functional.
  *  **Kubernetes node status**: After the Gatling tests, the output will show the results of `kubectl describe node`, showing the status of the node, including the pods and their allocated resources.
  *  **Docker status**: Lastly, statistics on all running Docker containers is posted by running `docker stats --no-stream`. Most notably, this shows the amount of consumed memory for every container running on the system in all namespaces. Hence, you will also see Kubernetes related services, like its DNS service and main controller, in addition to the ones for OpenWhisk.
+
+
+
+### Docker stats
+
+The dumped docker stats can be parsed with the included scripts to relevant data in CSV format.
+
+```bash
+cat docker_stats | python parse-docker-stats.py > docker_stats.csv
+```
